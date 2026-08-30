@@ -1,6 +1,6 @@
 # Ruzz
 
-**Ruzz** is an open-source Discord bot built for Minecraft communities.
+**Ruzz** is an open-source Discord bot built for Minecraft or other communities.
 
 Python · [py-cord](https://docs.pycord.dev/) 2.x · aiosqlite · FastAPI
 
