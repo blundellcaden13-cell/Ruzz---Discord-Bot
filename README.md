@@ -1,22 +1,64 @@
 # Ruzz
 
-**Ruzz** is an open-source Discord bot built for Minecraft or other communities.
+Open-source Discord bot for Minecraft communities.
 
-Python · [py-cord](https://docs.pycord.dev/) 2.x · aiosqlite · FastAPI
+**Python** · [py-cord](https://docs.pycord.dev/) 2.x · aiosqlite · FastAPI
 
-One bot instance works in as many servers as you invite it to. Every server has its own settings (roles, channels, tickets, etc.) stored in the database — no hardcoded IDs.
+Works in as many servers as you invite it to. Each server has its own settings (roles, channels, tickets, and more) stored in the database — nothing is hardcoded to a single guild.
 
 ---
 
 ## Features
 
-| Area | What you get |
-|------|----------------|
-| **Leveling** | XP from messages, ranks, contribution points, auto leaderboard panel |
-| **Tickets** | Dropdown panels, transcripts, claiming, priorities |
-| **Moderation** | Warns, mutes, kicks, bans, automod hooks, log channel |
-| **Minecraft** | `/server-status`, skins, pack-format lookup, optional Paper stats plugin |
-| **Welcome** | Configurable welcome channel + optional DM |
+| Area | Description |
+|------|-------------|
+| **Leveling** | Message XP, ranks, contribution points, auto-updating leaderboard panel |
+| **Tickets** | Support panels, transcripts, claiming, priorities |
+| **Moderation** | Warns, mutes, kicks, bans, log channel |
+| **Minecraft** | Server status, player skins, pack-format lookup, optional Paper stats plugin |
+| **Welcome** | Custom welcome channel messages and optional DMs |
+| **Polls** | Scheduled polls posted by the bot |
+| **Setup** | Configure everything with slash commands — no editing config files per server |
+
+---
+
+## Requirements
+
+- Python **3.11+** (3.12 and 3.13 work; `audioop-lts` is included for 3.12+)
+- A [Discord bot application](https://discord.com/developers/applications)
+
+### Intents (Developer Portal → your app → Bot)
+
+Enable:
+
+- Server Members Intent  
+- Message Content Intent  
+- Presence Intent  
+
+### Permissions
+
+When inviting the bot, include at least:
+
+`Manage Roles`, `Manage Channels`, `Kick Members`, `Ban Members`, `Moderate Members`, `Manage Messages`, `Send Messages`, `Embed Links`, `Attach Files`, `Read Message History`, `Use Application Commands`
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/blundellcaden13-cell/Ruzz---Discord-Bot.git
+cd Ruzz---Discord-Bot
+
+python -m venv venv
+
+# Linux / macOS
+source venv/bin/activate
+
+# Windows
+# venv\Scripts\activate
+
+pip install -r requirements.txt
+cp .env.example .env| **Welcome** | Configurable welcome channel + optional DM |
 | **Polls** | Scheduled polls delivered by the bot |
 | **Setup** | All config via slash commands (`/admin-role`, `/log-channel`, …) |
 
