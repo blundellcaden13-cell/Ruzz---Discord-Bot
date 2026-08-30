@@ -1,0 +1,17 @@
+# RuzzStats config
+#
+# port: which port the built-in stats HTTP server listens on.
+#   The bot's /mc-server command points at http://<this-host>:<port>/stats
+#
+# bind-address: leave as 0.0.0.0 to accept connections from anywhere
+#   that can reach this port, or set to 127.0.0.1 if the Discord bot
+#   runs on this same machine and you'd rather not expose it further
+#   (then use an SSH tunnel / same-host access only).
+#
+# token: if set, requests must include header "X-Ruzz-Token: <token>"
+#   or they get a 401. Strongly recommended if bind-address is 0.0.0.0.
+#   Leave blank to disable the check (not recommended on a public IP).
+
+port: 8095
+bind-address: "0.0.0.0"
+token: "change-me"

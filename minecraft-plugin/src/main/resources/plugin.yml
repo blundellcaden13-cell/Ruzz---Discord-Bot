@@ -1,0 +1,6 @@
+name: RuzzStats
+version: '1.0.0'
+main: com.ruzz.stats.RuzzStatsPlugin
+api-version: '1.21'
+author: Caden
+description: Exposes server stats (players, uptime, errors, unique members) over HTTP for the Ruzz Discord bot / website.
