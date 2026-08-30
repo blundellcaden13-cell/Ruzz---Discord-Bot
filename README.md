@@ -149,9 +149,7 @@ Details: [`minecraft-plugin/README.md`](minecraft-plugin/README.md)
 
 ## Security
 
-- Only put `TOKEN` and `OWNER_ID` in `.env`
-- Never commit `.env`, `*.db`, or log files (see `.gitignore`)
-- If a token was ever shared or committed, **reset it** in the Discord Developer Portal
+- NEVER share you bot token
 
 ---
 
