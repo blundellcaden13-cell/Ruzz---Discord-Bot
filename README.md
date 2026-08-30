@@ -1,33 +1,62 @@
 # Ruzz
 
-Discord bot for Minecraft communities. Python + py-cord 2.x + aiosqlite + FastAPI.
+**Ruzz** is an open-source Discord bot built for Minecraft communities.
 
-Features: leveling/XP, tickets, moderation, Minecraft tools, welcome/verification, reaction roles, polls, per-server config via slash commands.
+Python · [py-cord](https://docs.pycord.dev/) 2.x · aiosqlite · FastAPI
+
+One bot instance works in as many servers as you invite it to. Every server has its own settings (roles, channels, tickets, etc.) stored in the database — no hardcoded IDs.
+
+---
+
+## Features
+
+| Area | What you get |
+|------|----------------|
+| **Leveling** | XP from messages, ranks, contribution points, auto leaderboard panel |
+| **Tickets** | Dropdown panels, transcripts, claiming, priorities, web settings UI |
+| **Moderation** | Warns, mutes, kicks, bans, automod hooks, log channel |
+| **Minecraft** | `/server-status`, skins, pack-format lookup, optional Paper stats plugin |
+| **Welcome** | Configurable welcome channel + optional DM |
+| **Polls** | Schedule polls from a web UI; the bot posts them on time |
+| **Setup** | All config via slash commands (`/admin-role`, `/log-channel`, …) |
+
+---
 
 ## Requirements
 
-- Python 3.11+
-- Discord bot application (https://discord.com/developers/applications)
+- **Python 3.11+** (3.12/3.13 supported; `audioop-lts` is in `requirements.txt` for 3.12+)
+- A [Discord application](https://discord.com/developers/applications) with a bot user
 
-## Setup
+### Discord intents (Developer Portal → Bot)
 
-```bash
-python -m venv venv
-# Linux/macOS:
-source venv/bin/activate
-# Windows:
-# venv\Scripts\activate
-
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and set TOKEN and OWNER_ID
-```
-
-Enable these intents in the Developer Portal → Bot:
 - Server Members Intent
 - Message Content Intent
 - Presence Intent
 
+### Suggested invite permissions
+
+`Manage Roles`, `Manage Channels`, `Kick Members`, `Ban Members`, `Moderate Members`, `Manage Messages`, `Send Messages`, `Embed Links`, `Attach Files`, `Read Message History`, `Use Application Commands`
+
+---
+
+## Quick start
+
+### 1. Install
+
+```bash
+git clone https://github.com/blundellcaden13-cell/Ruzz---Discord-Bot.git
+cd Ruzz---Discord-Bot
+
+python -m venv venv
+
+# Linux / macOS
+source venv/bin/activate
+
+# Windows
+# venv\Scripts\activate
+
+pip install -r requirements.txt
+cp .env.example .env
 Invite with: Manage Roles, Manage Channels, Kick/Ban/Moderate Members, Manage Messages, Send Messages, Embed Links, Attach Files, Read Message History.
 
 ## Run
